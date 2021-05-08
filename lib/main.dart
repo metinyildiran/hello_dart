@@ -1,14 +1,90 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+
+class Num{
+  int num = 10;
+}
 
 void main() {
   runApp(MyApp());
   print("-----------------------------------------");
 
-  var name = "Metin";
-  String surname = "Yıldıran";
 
-  print(name + surname);
+  // basic variables
+  // var name = "Metin";
+  // String surname = "Yıldıran";
+  //
+  // print(name + surname);
+
+
+  // get input from user
+  // stdout.writeln('What is your name, brother?');
+  // String name = stdin.readByteSync() as String;
+  // print("My name is $name");
+
+
+  // conversion
+  // var number = int.parse("1");
+  // print("number $number");
+  //
+  // var word = 1.toString();
+  // print("word $word");
+
+
+  // final variables
+  // const constNum = 0;
+  // print("constant $constNum");
+
+
+  // operators are the same as java
+
+
+  // ?. and ?? and ??= are the same as kotlin too
+
+
+  // Ternary operator
+  // int x = 100;
+  // var result = x % 2 == 0 ? 'Even' : 'Odd';
+  // print(result);
+
+
+  // Type test
+  // var x = 100;
+  // if(x is int){
+  //   print("Integer");
+  // }
+
+
+  // switch-case statement is the same as well
+
+
+  // for loop and while loop are the mix of java and kotlin
+
+
+  // for-each
+  // var numbers = [1, 2, 3];
+  // numbers.forEach((n) => print(n));
+
+
+  // functions
+  // dynamic square(var num){  // dynamic means it can return any type
+  //   return num * num;
+  // }
+  // dynamic squareArrowFunc(var num) => num * num;  // This is the same function above but used arrow function
+  // void showOutput(var msg){
+  //   print(msg);
+  // }
+  // showOutput(square(2));
+  // print(squareArrowFunc(2).runtimeType);
+
+
+  // named parameters like in kotlin
+  dynamic sum({var num1, var num2}) => num1 + num2; // you need to put curly brackets to do a named parameter
+  print(sum(num1: 5,num2: 5));
+
 }
+
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
