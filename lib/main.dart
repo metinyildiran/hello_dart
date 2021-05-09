@@ -5,6 +5,29 @@ class Num{
   int num = 10;
 }
 
+class Person{
+  String name = "";
+  int age = 0;
+
+  // Person(String name, [int age = 18]){ // This is the same constructor as below
+  //   this.name = name;
+  //   this.age = age;
+  // }
+
+  Person(this.name, [this.age = 18]);
+
+  // named constructor
+  Person.guest(){
+    name = "Guest";
+    age = 18;
+  }
+
+  void showOutput(){
+    print(name);
+    print(age);
+  }
+}
+
 void main() {
   runApp(MyApp());
   print("-----------------------------------------");
@@ -79,8 +102,22 @@ void main() {
 
 
   // named parameters like in kotlin
-  dynamic sum({var num1, var num2}) => num1 + num2; // you need to put curly brackets to do a named parameter
-  print(sum(num1: 5,num2: 5));
+  // dynamic sum({var num1, var num2}) => num1 + num2; // you need to put curly brackets to do a named parameter
+  // print(sum(num1: 5,num2: 5));
+
+
+  // Class
+  // Person person = Person("Metin", 21);
+  // // person.name = "Metin";
+  // // person.age = 21;
+  // person.showOutput();
+  //
+  // var person2 = Person.guest();
+  // person2.showOutput();
+
+
+  // OOP is the same
+
 
 }
 
